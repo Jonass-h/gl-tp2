@@ -3,7 +3,7 @@ package org.emp.gl.core.launcher;
 
 import org.emp.gl.action.RobotAction;
 import org.emp.gl.core.lookup.Lookup;
-// import org.emp.gl.time.service.impl.DummyTimeServiceImpl;
+//import org.emp.gl.time.service.impl.DummyTimeServiceImpl;
 import org.emp.gl.time.service.impl.delegation.TimerServiceImplWithDelegation;
 import org.emp.gl.timer.service.TimerChangeListener;
 import org.emp.gl.timer.service.TimerService;
@@ -14,7 +14,7 @@ import org.emp.gl.model.Robot;
 import org.emp.gl.reglage.Commande;
 
 /**
- * younes hamza
+ * HAMZA Younes
  *
  */
 public class App {
@@ -38,8 +38,6 @@ public class App {
         
         Labyrinthe lt = new Labyrinthe();
         ts.addTimeChangeListener(lt);
-        //
-        //
         //
          Commande cmd = new Commande();
          
