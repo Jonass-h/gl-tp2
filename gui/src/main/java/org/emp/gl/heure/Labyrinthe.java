@@ -74,6 +74,9 @@ public class Labyrinthe implements TimerChangeListener{
 
         for (int row = 0; row < puzzle.length; row++) {
             for (int col = 0; col < puzzle[0].length; col++) {
+                if(row==0 && col==8 ){
+                    puzzle[row][col]='*';
+                }
                 JLabel label = makeLabel(puzzle[row][col]);
                 mainFrame.add(label);
             }
