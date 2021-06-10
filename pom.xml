@@ -53,10 +53,10 @@
     <module>timer-service</module>
        
     <module>ts-impl-with-delegation</module>
-    <module>heure</module>
     <module>reglage</module>
     <module>model</module>
     <module>action</module>
+    <module>gui</module>
   </modules>
   
 </project>

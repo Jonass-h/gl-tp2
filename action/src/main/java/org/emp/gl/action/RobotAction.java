@@ -16,4 +16,11 @@ public interface RobotAction {
     public void moveDown();
     int[] getNewPosition();
     int getDirection();
+    
+    // pour les butons nous attendons pas la prochaine seconde
+    // oon ecoute un evt de click avant une seconde et on applique le
+    // mouvement necessaire
+    public void addTimeChangeListener(ActionListener pl) ;
+    public void removeTimeChangeListener(ActionListener pl);
+    public void updateListener();
 }

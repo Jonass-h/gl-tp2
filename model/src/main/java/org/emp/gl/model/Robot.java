@@ -5,9 +5,12 @@
  */
 package org.emp.gl.model;
 
+import java.beans.PropertyChangeSupport;
+import org.emp.gl.action.ActionListener;
 import org.emp.gl.action.RobotAction;
 import org.emp.gl.core.lookup.Lookup;
 import org.emp.gl.time.service.impl.delegation.TimerServiceImplWithDelegation;
+import org.emp.gl.timer.service.TimerChangeListener;
 import org.emp.gl.timer.service.TimerService;
 
 /**
@@ -71,5 +74,25 @@ public class Robot extends TimerServiceImplWithDelegation implements RobotAction
     public int getDirection(){
         return state.direction;
     }
+
+    PropertyChangeSupport pcs = new PropertyChangeSupport(this);
+
+
+    @Override
+    public void updateListener() {
+       pcs.firePropertyChange(TimerChangeListener.SECONDE_PROP,null,null);
+    }
+
+    @Override
+    public void addTimeChangeListener(ActionListener pl) {
+        pcs.addPropertyChangeListener(pl);
+    }
+
+    @Override
+    public void removeTimeChangeListener(ActionListener pl) {
+
+        pcs.removePropertyChangeListener(pl);
+    }
+
     
 }
