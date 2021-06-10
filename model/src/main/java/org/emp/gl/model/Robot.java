@@ -60,5 +60,16 @@ public class Robot extends TimerServiceImplWithDelegation implements RobotAction
        System.out.println(" down ");
        state.moveDown();
     }
+    @Override
+    public int[] getNewPosition(){
+        int[] p =new int[2];
+        p[0]=state.position[0];
+        p[1]=state.position[1];
+        return p;
+    }
+    @Override
+    public int getDirection(){
+        return state.direction;
+    }
     
 }

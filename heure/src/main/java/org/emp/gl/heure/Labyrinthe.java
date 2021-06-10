@@ -10,10 +10,10 @@ import java.beans.PropertyChangeEvent;
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import org.emp.gl.action.RobotAction;
 import org.emp.gl.core.lookup.Lookup;
 import org.emp.gl.timer.service.TimerChangeListener;
 import org.emp.gl.timer.service.TimerService;
-
 /**
  *
  * @author younes
@@ -45,7 +45,7 @@ public class Labyrinthe implements TimerChangeListener{
     };
     
     
-    public void updateWindow(int[] position) {
+    public void updateWindow(int[] position,int dir) {
         
         puzzle[position[0]][position[1]]='*';
         
@@ -109,7 +109,8 @@ public class Labyrinthe implements TimerChangeListener{
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         TimerService ts = Lookup.getInstance().getService(TimerService.class);
         if(pce.getPropertyName() .equals( TimerChangeListener.SECONDE_PROP)){
-            
+            RobotAction robot =(RobotAction) Lookup.getInstance().getService(Robot.class);
+            updateWindow(robot.getNewPosition(),robot.getDirection());
         }
     }
 }

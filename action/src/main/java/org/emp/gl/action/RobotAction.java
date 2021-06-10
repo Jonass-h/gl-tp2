@@ -14,4 +14,6 @@ public interface RobotAction {
     public void moveRight();
     public void moveLeft();
     public void moveDown();
+    int[] getNewPosition();
+    int getDirection();
 }

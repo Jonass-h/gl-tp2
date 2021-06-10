@@ -7,7 +7,6 @@ import org.emp.gl.core.lookup.Lookup;
 import org.emp.gl.time.service.impl.delegation.TimerServiceImplWithDelegation;
 import org.emp.gl.timer.service.TimerChangeListener;
 import org.emp.gl.timer.service.TimerService;
-import org.emp.gl.action.WatchAction;
 import org.emp.gl.heure.Labyrinthe;
 import org.emp.gl.heure.LabyrintheGui;
 import org.emp.gl.model.Robot;
