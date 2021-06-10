@@ -37,7 +37,7 @@ public class App {
         
         Labyrinthe lt = new Labyrinthe();
         ts.addTimeChangeListener(lt);
-        //
+
          Commande cmd = new Commande();
          
         System.out.println(" ready to command !!  ");
