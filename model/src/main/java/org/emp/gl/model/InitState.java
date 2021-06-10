@@ -17,8 +17,15 @@ public class InitState extends RobotState{
         System.out.println("init state");
         robot=r;
         direction=dir;
-        position[0]=pos[0];
-        position[1]=pos[1];  
+        if(verify_boundaries(pos[0], pos[0])){
+            position[0]=pos[0];
+            position[1]=pos[1];   
+        }
+        else{
+            position[0]=0;
+            position[1]=0; 
+        }
+       
     }
 
     @Override
@@ -26,7 +33,6 @@ public class InitState extends RobotState{
         int temp[]=new int [2];
         temp[0]=position[0];
         temp[1]=position[1]+1;
-        
         robot.setState(new Up(3,temp,this.robot));
     }
     @Override

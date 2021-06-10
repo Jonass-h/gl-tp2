@@ -16,6 +16,7 @@ public class Down extends  RobotState{
         System.out.println("down state");
         robot=r;
         direction=dir;
+        
         position[0]=pos[0];
         position[1]=pos[1];  
     }

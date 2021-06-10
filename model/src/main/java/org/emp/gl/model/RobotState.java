@@ -18,4 +18,9 @@ public abstract class RobotState {
     public abstract void moveRight();
     public abstract void moveLeft();
     public abstract void moveDown();
+    
+    public boolean verify_boundaries(int a,int b){
+
+      return (a>0 && a<9 && b>0 && b<9);        
+    }
 }
